@@ -1,10 +1,7 @@
 # Instructions:
 1.	Clone repository.
 2.	Install required libraries (pip install -r requirements.txt).
-3.	Download dataset (IPProjectDataset24).
-4.	Extract dataset (rarfile library).
-5.	Run python train.py for training.
-6.	Run python predict.py for predictions.
+3.  Run semantic segmenation.ipynb 
 Code Documentation
 MarkDown
 # train.py
@@ -36,11 +33,5 @@ import numpy as np
 import cv2
 ...
 
-# Load trained models
-unet_model = tf.keras.models.load_model('unet_model.h5')
-fcn_model = tf.keras.models.load_model('fcn_model.h5')
-segnet_model = tf.keras.models.load_model('segnet_model.h5')
-
 # Make predictions
 sixteenPrediction, actuals, masks = predict16(framObjValidation, fcn_model)
-
